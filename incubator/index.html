@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Data Display</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="website icon" type="png" href="logo.png" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="screen">
+      <div id="meters">
+        <div class="meter1">
+          <div class="card1">
+            <div class="numbers">
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+            </div>
+            <div class="needles">
+              <span id="s1"></span>
+              <span class="center"></span>
+            </div>
+          </div>
+          <div class="reading" id="meter1"></div>
+        </div>
+        <div class="meter2">
+          <div class="card2">
+            <div class="numbers">
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+              <span class="number"></span>
+            </div>
+            <div class="needles">
+              <span id="s2"></span>
+              <span class="center"></span>
+            </div>
+          </div>
+          <div class="reading" id="meter2"></div>
+        </div>
+      </div>
+      <div id="component_status">
+        <div class="components" id="fan_cont">
+          Cooler
+          <button id="fan" onclick="fantoggle()">ON</button>
+        </div>
+        <div class="components" id="humidifier_cont">
+          Humidifier
+          <button id="humidifier" onclick="humidifier_toggle()">ON</button>
+        </div>
+      </div>
+    </div>
+    <div id="status">Online.<br />Connected to Firebase.</div>
+    <div id="popup">
+      <span id="popup-content"></span>
+      <button onclick="hidePopup()">Close</button>
+      <button id="Yes" onclick="yes()">Yes</button>
+    </div>
+  </body>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database-compat.js"></script>
+</html>
